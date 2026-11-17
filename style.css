@@ -1,0 +1,237 @@
+
+
+
+/* GENERAL PAGE DESIGN */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+
+
+/* PAGE HEADER */
+
+.page-header {
+    background-color: #163a5f;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.page-header h1 {
+    margin: 0;
+}
+
+.page-header p {
+    color: white;
+}
+
+
+/* MAIN CONTENT */
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+
+/* EQUIPMENT CARD */
+
+.equipment-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #163a5f;
+}
+
+
+/* BUTTONS */
+
+button {
+    background-color: #163a5f;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #2874a6;
+}
+
+.secondary-btn {
+    background-color: #777777;
+}
+
+.secondary-btn:hover {
+    background-color: #555555;
+}
+
+
+/* EQUIPMENT FORM */
+
+.equipment-form {
+    max-width: 500px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8fafc;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    display: grid;
+    gap: 15px;
+}
+
+.equipment-form[hidden] {
+    display: none;
+}
+
+.equipment-form h3 {
+    color: #163a5f;
+}
+
+.form-group {
+    display: grid;
+    gap: 7px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+
+/* FORM MESSAGES */
+
+.form-message {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.message-success {
+    color: green;
+}
+
+.message-error {
+    color: red;
+}
+
+
+/* EQUIPMENT TABLE */
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 25px;
+}
+
+.equipment-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.equipment-table th,
+.equipment-table td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+.equipment-table th {
+    background-color: #163a5f;
+    color: white;
+}
+
+.equipment-table tbody tr:nth-child(even) {
+    background-color: #f0f2f5;
+}
+
+
+/* EQUIPMENT STATUS */
+
+.status {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.status-operational {
+    background-color: #e5f5e9;
+    color: #176b35;
+}
+
+.status-maintenance {
+    background-color: #fff1d6;
+    color: #8a5700;
+}
+
+
+/* MOBILE RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+
+    .page-header h1 {
+        font-size: 22px;
+    }
+
+    .equipment-card {
+        padding: 15px;
+    }
+
+    .equipment-table th,
+    .equipment-table td {
+        padding: 9px;
+        font-size: 13px;
+    }
+
+    .form-actions {
+        flex-wrap: wrap;
+    }
+
+}
+
+/* Form fields */
+
+.form-group {
+    display: grid;
+    gap: 6px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.equipment-form button {
+    justify-self: start;
+}

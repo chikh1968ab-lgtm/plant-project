@@ -1,0 +1,157 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Power Plant Maintenance Manager</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <h1>Power Plant Maintenance Manager</h1>
+        <p>Power Plant Equipment Management System</p>
+    </header>
+
+    <main>
+
+        <section class="equipment-card">
+
+            <h2>Equipment Management </h2>
+
+            <p>Manage gas turbines and steam turbines.</p>
+
+            <!-- Add equipment button -->
+            <button id="add-equipment-btn" type="button">
+                Add New Equipment
+            </button>
+
+            <!-- Equipment registration form -->
+            <form id="equipment-form" class="equipment-form" hidden>
+
+                <h3>Add New Equipment</h3>
+
+                <div class="form-group">
+                    <label for="equipment-id">Equipment ID  </label>
+                    <input
+                        type="text"
+                        id="equipment-id"
+                        placeholder="Exemple GR04"                                               "
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="equipment-type">Equipment Type</label>
+                    <input
+                        type="text"
+                        id="equipment-type"
+                        placeholder="Gas Turbine"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="equipment-location">Location</label>
+                    <input
+                        type="text"
+                        id="equipment-location"
+                        placeholder="Plant C"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="equipment-status">Status</label>
+
+                    <select id="equipment-status" required>
+                        <option value="">Select a status</option>
+                        <option value="Operational">Operational</option>
+                        <option value="Maintenance">Maintenance</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+
+                    <button type="submit">
+                        Save Equipment
+                    </button>
+
+                    <button type="button" id="cancel-btn" class="secondary-btn">
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+            <p id="form-message" class="form-message" aria-live="polite"></p>
+
+            <!-- Equipment table -->
+            <div class="table-container">
+
+                <table class="equipment-table">
+
+                    <thead>
+                        <tr>
+                            <th>Equipment ID</th>
+                            <th>Equipment Type</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="equipment-list">
+
+                        <tr>
+                            <td>TG01</td>
+                            <td>Gas Turbine</td>
+                            <td>Plant A</td>
+                            <td>
+                                <span class="status status-operational">
+                                    Operational
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>TG02</td>
+                            <td>Steam Turbine</td>
+                            <td>Plant A</td>
+                            <td>
+                                <span class="status status-maintenance">
+                                    Maintenance
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>TG03</td>
+                            <td>Gas Turbine</td>
+                            <td>Plant B</td>
+                            <td>
+                                <span class="status status-operational">
+                                    Operational
+                                </span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Connect JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
